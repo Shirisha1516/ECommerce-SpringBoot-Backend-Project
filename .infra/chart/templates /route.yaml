@@ -1,0 +1,12 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: spring-deployment
+spec:
+  to:
+    kind: Service
+    name: spring-deployment
+    weight: 100
+  port:
+    targetPort: 8080
+  wildcardPolicy: None
